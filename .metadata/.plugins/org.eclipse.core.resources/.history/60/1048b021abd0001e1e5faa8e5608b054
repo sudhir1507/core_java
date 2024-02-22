@@ -1,0 +1,82 @@
+package org.employee;
+import java.sql.*;
+import java.util.*;
+public class EmployeeDataApp {
+
+	public static void main(String[] args) throws Exception {
+		int value,eid,esal;
+		String ename,eemail,econtact;
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbcdatabase","root","sudhir");
+		if(conn!=null) {
+			System.out.println("Database connected..");
+			PreparedStatement pst=null;
+			do {
+				Scanner sc=new Scanner(System.in);
+				System.out.println("\ncase 1.create table name as Employees");
+				System.out.println("case 2.insert 10 record of Employees table using eid,ename,eemail,esal,econtact");
+				System.out.println("case 3.display all record of Employees table");
+				System.out.println("case 4.write sql query to display all Employee whose id=1 and name is ram as well as salary greate than 10000 ");
+				System.out.println("case 5.write sql query to display employee whose name is not ram and salaryis less 1000");
+				System.out.println("case 6.write sql query to display Employee whose name is ram and salary is not 10000");
+				System.out.println("case 7.write sql query to display employee whose salary is 200 and email is shyam@gmail.com");
+				System.out.println("case 8.write sql query to display all employee whose salary is less than 30000 and name is ramesh");
+				System.out.println("case 9.write sql query to update Employee whose id is 1 or name is shyam");
+				System.out.println("case 10.display employee record whose salary is 10000 ,20000,3000");
+				System.out.println("case 11.display employee record whose salary is not in 10000 ,20000,3000");
+				System.out.println("case 12.display employee record whose salary is between 10000 and 60000");
+				System.out.println("case 13.display employee record whose salary is 10000 ,20000,3000 and name is not ramesh");
+				System.out.println("case 14.display employee record whose name is raam,shyam,ganesh");
+				System.out.println("case 15.display employee record whose salary is less than 100000 and name is shyam,dinesh");
+
+				System.out.println("Enter choice");
+				int choice=sc.nextInt();
+				switch(choice) {
+				case 1:
+					conn.prepareStatement("create table employees(eid int(5),ename varchar(200),eemail varchar(100),esal int(10),econtact varchar(200))");
+					value=pst.executeUpdate();
+					if(value<1) {
+						System.out.println("Student table is created..");
+					}else {
+						System.out.println("Table is Not created");
+					}
+					break;
+				case 2:
+					break;
+				case 3:
+					break;
+				case 4:
+					break;
+				case 5:
+					break;
+				case 6:
+					break;
+				case 7:
+					break;
+				case 8:
+					break;
+				case 9:
+					break;
+				case 10:
+					break;
+				case 11:
+					break;
+				case 12:
+					break;
+				case 13:
+					break;
+				case 14:
+					break;
+				case 15:
+					break;
+				default:
+					System.out.println("Wrong choice..");
+				}
+			}while(true);
+		}else {
+			System.out.println("Database not Connected..");
+		}
+
+	}
+
+}

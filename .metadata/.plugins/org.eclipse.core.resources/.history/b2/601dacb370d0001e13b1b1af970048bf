@@ -1,0 +1,20 @@
+package org.tech;
+import java.sql.*;
+import java.util.*;
+public class InsertRegisterData {
+
+	public static void main(String[] args) throws SQLException {
+		com.mysql.cj.jdbc.Driver d=new com.mysql.cj.jdbc.Driver();
+		DriverManager.registerDriver(d);
+		Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbcdatabase","root","sudhir");
+		if(conn!=null) {
+			System.out.println("Connected..");
+			Statement st=conn.createStatement();
+			int value=st.executeUpdate("insert into register values('0','rid','name','email','password')");
+		}else {
+			System.out.println("Not Connected");
+		}
+
+	}
+
+}

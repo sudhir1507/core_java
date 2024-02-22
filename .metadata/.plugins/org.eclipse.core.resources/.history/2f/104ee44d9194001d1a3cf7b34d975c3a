@@ -1,0 +1,12 @@
+package JavaPack;
+
+public class SelectionDemo {
+
+	public static void main(String[] args) {
+		int n=6;
+		int j=5;
+		j=n>j?20:30;
+		
+	}
+
+}

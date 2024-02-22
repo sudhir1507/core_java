@@ -1,0 +1,62 @@
+package jdbcpractical;
+
+import java.sql.*;
+import java.util.*;
+
+public class EmployeeDetailsApp {
+
+	public static void main(String[] args) throws SQLException {
+		com.mysql.cj.jdbc.Driver d = new com.mysql.cj.jdbc.Driver();
+		String createQueary= "create table employee (sid int,sname varchar(100),sEmail varchar(100),sAddress varchar(100))";
+		DriverManager.registerDriver(d);
+		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbcdatabase", "root", "sudhir");
+		if (conn != null) {
+				Statement stmt = conn.createStatement();
+				do {
+					Scanner sc=new Scanner(System.in);
+					System.out.println("\ncase 1.create table name as Student");
+					System.out.println("case 2.insert five record of employee table using feild eid,ename,email,esal,econtact");
+					System.out.println("case 3.display all record of employee");
+					System.out.println("case 4.update employee by id");
+					System.out.println("case 5.Delete employee record by name");
+					System.out.println("Enter choice");
+					int choice=sc.nextInt();
+					switch(choice) {
+					case 1:
+						int Value = stmt.executeUpdate(createQueary);
+						if(Value<1) {
+							System.out.println("Table created..!");
+						}else {
+							System.out.println("Table is NOT created..!");
+						}
+						break;
+					case 2:
+						System.out.println("Enter eid");
+						int id=sc.nextInt();
+						System.out.println("Enter ename");
+						String name=sc.next();
+						System.out.println("Enter email");
+						String email=sc.next();
+						System.out.println("Enter esal");
+						int esal=sc.nextInt();
+						System.out.println("Enter econtact");
+						String econtact=sc.next();
+						int value=stmt.executeUpdate("insert into employee values()")
+						break;
+					case 3:
+						break;
+					case 4:
+						break;
+					case 5:
+						break;
+					default:
+						break;
+					}
+				}while(true);
+				
+			}else {
+					System.out.println("Database not connceted");
+		}
+	}
+
+}

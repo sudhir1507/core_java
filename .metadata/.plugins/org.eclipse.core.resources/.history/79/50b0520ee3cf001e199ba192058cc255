@@ -1,0 +1,27 @@
+package jdbcpractical;
+
+import java.sql.*;
+import java.util.*;
+
+public class EmployeeDetailsApp {
+
+	public static void main(String[] args) throws SQLException {
+		com.mysql.cj.jdbc.Driver d = new com.mysql.cj.jdbc.Driver();
+		String createQueary= " create table student (sid int,sname varchar(100),sEmail varchar(100),sAddress varchar(100))";
+		DriverManager.registerDriver(d);
+		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbcdatabase", "root", "sudhir");
+		if (conn != null) {
+
+				Statement stmt = conn.createStatement();
+				int Value = stmt.executeUpdate(createQueary);
+				if(Value<1) {
+					System.out.println("yese");
+				}else {
+					System.out.println("no");
+				}
+		} else {
+			System.out.println("Database not connceted");
+		}
+	}
+
+}

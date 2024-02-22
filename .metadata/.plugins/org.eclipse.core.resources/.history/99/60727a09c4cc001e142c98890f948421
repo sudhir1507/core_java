@@ -1,0 +1,26 @@
+package PracticeJava;
+
+class  ArrayList
+{
+	Object arry[];
+	int capacity;
+	int s;
+	
+	
+	ArrayList()
+	{
+		capacity=10;
+		  s=0;
+		  arry=new Object[capacity];
+	}
+}
+
+
+public class TEst {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

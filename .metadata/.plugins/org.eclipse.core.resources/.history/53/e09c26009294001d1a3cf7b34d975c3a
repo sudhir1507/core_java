@@ -1,0 +1,13 @@
+package JavaPack;
+
+public class SelectionDemo {
+
+	public static void main(String[] args) {
+		int n=7;
+		int j=0;
+		j=n%2==0?10:20;
+		System.out.println(j);
+		
+	}
+
+}

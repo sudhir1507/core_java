@@ -21,7 +21,10 @@ public class VectorApp {
 		v.add(20);
 		v.add(30);
 		v.add(40);
-		
+		Enumeration em=v.elements();
+		while(em.hasMoreElements()) {
+			System.out.println(em.nextElement());
+		}
 		System.out.println("Capacity of vector "+v.capacity());
 		System.out.println("size of vector " +v.size());
 	}

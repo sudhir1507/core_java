@@ -7,8 +7,16 @@ public class PutMethod {
 		map.put('a', 1000);
 		map.put('b', 2000);
 		map.put('c', 3000);
-		map.put('d',4000);
+		map.put('c',4000);
 		
+		Set keys=map.keySet();
+		Iterator i=keys.iterator();
+		while(i.hasNext()) {
+			
+			char key=(char)i.next();
+			int value=map.get(key);
+			System.out.println(key+"\t"+value);
+		}
 		for(Map.Entry e:map.entrySet()) {
 			char key=(char)e.getKey();
 			int value=(int)e.getValue();

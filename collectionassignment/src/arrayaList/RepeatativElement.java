@@ -23,7 +23,7 @@ public class RepeatativElement {
 			for(int j=i+1;j<al.size();j++) {
 				if(al.get(i)==al.get(j))
 				{
-					al.remove(al);
+					al.remove(i);
 				}
 			}
 			

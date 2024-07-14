@@ -4,8 +4,8 @@ import java.io.*;
 public class CounterApp {
 
 	public static void main(String[] args) throws IOException {
-		int countc=0,countw=0,countv=0,countcc=0,countd=0;
-		File f=new File("C:\\Users\\ACER\\Documents\\GTH Practicals\\Java\\Writer123.txt");
+		int countc=0,countw=1,countv=0,countcc=0,countd=0,clines=1;
+		File f=new File("C:\\Users\\ACER\\Documents\\GTH Practicals\\Java\\Writer.txt");
 		FileReader fr=new FileReader(f);
 		int data;
 		while((data=fr.read())!=-1) {
@@ -25,6 +25,9 @@ public class CounterApp {
 			if(data>=48&&data<=57) {
 				countd++;
 			}
+			if(data==10) {
+				clines++;
+			}
 		}
 		System.out.println("Number of charectors "+countc);
 		System.out.println("Number of words "+countw);
@@ -32,6 +35,7 @@ public class CounterApp {
 		System.out.println("Number of Consonents "+(countcc-countv));
 		System.out.println("Number of Digits "+countd);
 		System.out.println("Number of special Symbols "+(countc-countcc-countd));
+		System.out.println("Number of lines "+clines);
 	}
 
 }

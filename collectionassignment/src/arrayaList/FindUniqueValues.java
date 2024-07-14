@@ -33,8 +33,6 @@ public class FindUniqueValues {
 				}
 				
 			}
-			
-			
 			Iterator iter = v.iterator();
 			while (iter.hasNext()) {
 				

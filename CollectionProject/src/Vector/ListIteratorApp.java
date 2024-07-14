@@ -25,10 +25,11 @@ public class ListIteratorApp {
 ////			System.out.println(obj);
 //		}
 //		System.out.println(v);
-		for(int i=0;i<v.size();i++) {
-			Object obj=v.get(i);
-			System.out.println(obj);
-		}
+//		for(int i=0;i<v.size();i++) {
+//			Object obj=v.get(i);
+//			System.out.println(obj);
+//		}
+		v.forEach(values->System.out.println(values));
 	}
 
 }

@@ -15,6 +15,6 @@ public class GenericsWithMap {
 					Map.Entry e=it.next();
 					System.out.println(e.getKey()+" "+e.getValue());
 				}
-	}
+	   }
 
 }

@@ -19,14 +19,12 @@ public class SortLinkedlist {
 		System.out.println("after sorting list");
 		for(int i=0;i<list.size();i++) {
 			for(int j=i+1;j<list.size();j++) {
-				
 				if((int)list.get(i)>(int)list.get(j)) {
 					int temp=(int)list.get(i);
 					list.set(i, (int)list.get(j));
 					list.set(j, temp);
 				}
 			}
-			
 		}
 		for(Object obj:list) {
 			System.out.println(obj);

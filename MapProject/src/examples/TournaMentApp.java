@@ -15,7 +15,7 @@ public class TournaMentApp {
 		a2.add("Smith");
 		a2.add("Maxwell");
 		a2.add("Warner");
-		a2.add("Starck");
+		a2.add("Starc");
 		
 		LinkedHashMap map=new LinkedHashMap();
 		map.put("India", a1);

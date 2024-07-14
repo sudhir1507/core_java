@@ -9,7 +9,6 @@ class Abc extends Thread{
 				System.out.println(ee);
 			}
 		}
-		
 	}
 }
 class Xyz extends Thread{
@@ -21,8 +20,7 @@ class Xyz extends Thread{
 			}catch(InterruptedException ee) {
 				System.out.println(ee);
 			}
-		}
-		
+		}	
 	}
 }
 public class ThreadApp {

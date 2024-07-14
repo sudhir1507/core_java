@@ -53,8 +53,8 @@ public class MapWithPojoApp {
 		
 		map.put(p1.getId(), p1);
 		map.put(p2.getId(), p2);
-		map.put(p3.getId(),p3);
-		map.put(p4.getId(),p4);
+		map.put(p3.getId(), p3);
+		map.put(p4.getId(), p4);
 		map.put(p5.getId(), p5);
 		
 	    Set keys=map.keySet();

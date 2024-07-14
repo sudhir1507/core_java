@@ -57,12 +57,12 @@ public class Collectionpract11 {
 			System.out.println("Element removed");
 			break;
 		case 5:
-			System.out.println("sorting in ascending order");
-			for(int j=0;j<list.size();j++) {
+			System.out.println("sorting in descending order");
+			for(int j=0;j<list.size();j++) { //4 3 2 6 3
 				for(int k=j+1;k<list.size();k++) {
-					int x=(int)list.get(j);
-					int y=(int)list.get(k);  // 1 2 3 4 5 6 
-					if(x<y) {
+					int x=(int)list.get(j);  // 4 
+					int y=(int)list.get(k);  // 3
+					if(x<y) {  //
 						int temp=x;
 						list.set(j, y);  // 0 2
 						list.set(k, temp);  // 1 1
